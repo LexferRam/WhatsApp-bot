@@ -1,4 +1,4 @@
-const sendMessage = require("../service/apiService")
+// const sendMessage = require("../service/apiService")
 const verificar = (req, res) => {
     try {
         var tokenapi = "TOKENAPINODE"
@@ -26,7 +26,7 @@ const recibir = (req, res) => {
         const number = messages["from"]
         const text = messages["text"]["body"]
         console.log(`El numero es ${number} y el texto es ${text}`)
-        sendMessage.sendMenssageWhatsapp(text,number)
+        // sendMessage.sendMenssageWhatsapp(text,number)
         res.send("EVENT_RECEIVED"); 
 
     } catch (error) {
