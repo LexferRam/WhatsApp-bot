@@ -21,7 +21,13 @@ const verificar = (req, res) => {
 const recibir = (req, res) => {
     try {
         var entry = (req.body["entry"])[0];
-        console.log(entry)
+        var changes = (entry["changes"])[0];
+        var value = changes["value"];
+        var objetoMensaje = value["message"]
+
+        console.log(objetoMensaje)
+        res.send("EVENT_RECEIVED")
+
     } catch (error) {
         console.log(req)
         res.send("EVENT_RECEIVED")
