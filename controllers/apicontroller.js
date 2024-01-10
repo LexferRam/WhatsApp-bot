@@ -19,7 +19,14 @@ const verificar = (req, res) => {
 
 
 const recibir = (req, res) => {
-    res.send("Recibido")
+    try {
+        var entry = (req.body["entry"])[0];
+        console.log(entry)
+    } catch (error) {
+        console.log(req)
+        res.send("EVENT_RECEIVED")
+        
+    }
 }
 
 module.exports = {
