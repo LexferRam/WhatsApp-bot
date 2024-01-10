@@ -25,7 +25,7 @@ const recibir = (req, res) => {
         var value = changes["value"];
         var objetoMensaje = value["messages"]
 
-        console.log(objetoMensaje)
+        console.log(value)
         res.send("EVENT_RECEIVED")
 
     } catch (error) {
